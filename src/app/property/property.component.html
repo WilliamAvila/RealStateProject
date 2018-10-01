@@ -1,0 +1,176 @@
+<form #workForm="ngForm" class="editForm" novalidate>
+  <div class="form-horizontal">
+      <div >
+          <br/>
+          <h2 class="head text-center">Informacion de la publicacion</h2>
+          <br/>
+          <div class='row'>
+              <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+                  <div class="form-group">
+                      <label class="control-label" for="email">Tipo de Inmobilario</label>
+                      <select class="form-control" [(ngModel)]="selectedValue" name="tipoInmobiliario">
+                          <option *ngFor="let c of types" [value]="c" >{{c}} </option>
+                      </select>
+                  </div>
+                <div class="row">
+                      <div class='col-xs-12 col-sm-6'>
+                          <div class="form-group">
+                              <label class="control-label" for="firstname">Departamento</label>  
+                              <input class="form-control input-md" type="select" placeholder="Departamento">   
+                              
+                          </div>
+                      </div>
+                      <div class='col-xs-12 col-sm-6'>
+                          <div class="form-group">
+                              <label class="control-label" for="lastname">Ciudad</label>  
+                              <input class="form-control input-md"  type="select" placeholder="Ciudad">
+                              
+                          </div>
+                      </div>
+                </div>  
+                <image-upload></image-upload>
+                <div class="form-group">
+                    <label class="control-label" for="email">Tipo de Transaccion</label>
+                    <select class="form-control input-md" [(ngModel)]="tipoTransaccion">
+                        <option *ngFor="let c of transactionTypes" [ngValue]="c">{{c.name}}</option>
+                    </select>
+                </div>
+
+
+          <h3 class="head text-center">Especificaciones del Mobiliario</h3>
+          <div class="form-group">
+              <label class="control-label" for="email">Tipo del Complejo</label>
+              <select class="form-control input-md" [(ngModel)]="especificaciones">
+                  <option *ngFor="let c of complexTypes" [ngValue]="c">{{c.name}}</option>
+                </select>
+          </div>
+          <h3 class="head text-center">Caracteristicas del Mobiliario</h3>
+            <div class="row">
+                <div class='col-xs-12 col-sm-6'>
+                    <div class="form-group">
+                        <label class="control-label" for="firstname">Numero de Habitaciones</label>  
+                        <input class="form-control input-md" type="number" placeholder="Habitaciones">   
+                        
+                    </div>
+                </div>
+                <div class='col-xs-12 col-sm-6'>
+                    <div class="form-group">
+                        <label class="control-label" for="lastname">Numero de Baños</label>  
+                        <input class="form-control input-md"  type="number" placeholder="Baños">
+                        
+                    </div>
+                </div>
+                <div class='col-xs-12 col-sm-6'>
+                    <div class="form-group">
+                        <label class="control-label" for="lastname">Parqueos disponibles</label>  
+                        <input class="form-control input-md"  type="number" placeholder="Parqueos">
+                        
+                    </div>
+                </div>
+            </div> 
+            <h3 class="head text-center">Areas que posee el Complejo</h3>
+         
+            <div class="form-group">
+                <div class="radio-inline">
+                    <label>
+                        <input type="checkbox"  name="livingRoom"  value="Design">
+                        Sala
+                    </label>
+                  </div>
+                <div class="radio-inline">
+                    <label>
+                        <input type="checkbox"  name="dinningRoom"  value="Code">
+                        Comedor
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        <input type="checkbox"  name="kitchen" value="Deploy">
+                        Cocina
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                      <label>
+                          <input type="checkbox"  name="laundryRoom" value="Code">
+                          Lavanderia
+                      </label>
+                  </div>
+                  <div class="radio-inline">
+                      <label>
+                          <input type="checkbox"  name="studyRoom"  value="Code">
+                          Estudio
+                      </label>
+                  </div>
+            </div>
+
+            <h3 class="head text-center">Amenidades que posee el Complejo</h3>
+         
+            <div class="form-group">
+                <div class="radio">
+                    <label>
+                        <input type="checkbox" #work="ngModel"  name="security" [(ngModel)]="workType" value="Design">
+                        Seguridad
+                    </label>
+                  </div>
+                <div class="radio">
+                    <label>
+                        <input type="checkbox" #work="ngModel" required name="waterTank" [(ngModel)]="waterTank" value="Code">
+                        Tanque de Agua/Pozo
+                    </label>
+                  </div>
+                <div class="radio">
+                    <label>
+                        <input type="checkbox" #work="ngModel" required name="furniture" [(ngModel)]="furniture" value="Deploy">
+                        Amueblado
+                    </label>
+                  </div>
+            </div>
+
+            <div class="row">
+                <div class='col-xs-12 col-sm-6'>
+                    <div class="form-group">
+                        <label class="control-label">Varas Cuadradas de Terreno</label>  
+                        <input class="form-control input-md" type="text" placeholder="Varas Cuadradas de Terreno" >   
+                     </div>
+                </div>
+                <div class='col-xs-12 col-sm-6'>
+                    <div class="form-group">
+                        <label class="control-label" >Varas Cuadradas de Construccion</label>  
+                        <input class="form-control input-md" type="text" placeholder="Varas Cuadradas de Construccion">
+                      </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="form-group">
+                <div class='col-xs-12 col-sm-6'>
+                        <label class="control-label" >Informacion Adicional</label>  
+                        <textarea class="form-control"  rows="3"></textarea>
+                </div>
+            </div>
+            </div>
+            <h3 class="head text-center">Precio</h3>
+            <div class="row">
+                <div class='col-xs-12 col-sm-6'>
+                    <div class="form-group">
+                        <label class="control-label">Precio</label>  
+                        <input class="form-control input-md" type="number" placeholder="Precio" >   
+                     </div>
+                </div>
+                <div class='col-xs-12 col-sm-6'>
+                    <div class="form-group">
+                        <label class="control-label" >Frecuencia</label>  
+                        <input class="form-control input-md" type="text" placeholder="Frecuencia">
+                      </div>
+                </div>
+            </div>
+            <h3 class="head text-center">Otros Cargos</h3>
+            <app-other-charges class="todos"></app-other-charges>
+          </div>
+          </div>
+          <div class="form-group text-center space-40">
+              <button class="btn btn-outline-rounded btn-default" (click)="goToPrevious(workForm)"> <span style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous</button>
+              <button class="btn btn-outline-rounded btn-info" [disabled]="!workForm.valid" (click)="goToNext(workForm)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+          </div>
+      </div>
+  </div>
+</form>

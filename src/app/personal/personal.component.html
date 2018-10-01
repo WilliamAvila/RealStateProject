@@ -1,0 +1,66 @@
+<div class="text-center container col-md-5 ">
+<form #personalForm="ngForm" class="editForm" novalidate>
+  <div >
+      <h2 class="head">{{title}}</h2>
+      <br/>
+
+          
+              <div class="row">
+                  <div class='col-xs-12 col-sm-6'>
+                      <div class="form-group">
+                          <label class="control-label" for="firstname">Nombre</label>  
+                          <input class="form-control input-md" #firstname="ngModel" required name="firstname" type="text" placeholder="Nombre" [(ngModel)]="personal.firstName">   
+                          <div class="alert alert-danger" [hidden]="firstname.valid">Primer nombre es requerido</div>
+                      </div>
+                  </div>
+                  <div class='col-xs-12 col-sm-6'>
+                      <div class="form-group">
+                          <label class="control-label" for="lastname">Apellido</label>  
+                          <input class="form-control input-md" #lastname="ngModel" required name="lastname" type="text" placeholder="Apellido" [(ngModel)]="personal.lastName">
+                          <div class="alert alert-danger" [hidden]="lastname.valid">Apellido es requerido</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="control-label" for="email">Correo Electronico</label>
+                  <input class="form-control input-md" #email="ngModel" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" name="email" type="text" placeholder="Correo Electronico" [(ngModel)]="personal.email">
+                  <div class="alert alert-danger" [hidden]="email.valid">Correo electronico es requerido y debe ser uno valido</div>
+              </div>
+              <div class="form-group">
+                  <label class="control-label" for="birthday">Fecha de Nacimiento</label>  
+                  <input class="form-control input-md" #birthday="ngModel" required name="birthday" type="date" placeholder="Fecha de Nacimiento" [(ngModel)]="personal.birthday">   
+                  <div class="alert alert-danger" [hidden]="firstname.valid">Fecha de nacimiento es requerida</div>
+              </div>
+
+              <div class="form-group">
+                  <label class="control-label" for="password">Contraseña</label>  
+                  <input class="form-control input-md" #password="ngModel" required name="password" type="password" [(ngModel)]="personal.password">   
+                  <div class="alert alert-danger" [hidden]="firstname.valid">Contraseña es requerida</div>
+              </div>
+
+              <div class="form-group">
+                  <label class="control-label" for="password">Confirmar Contraseña</label>  
+                  <input class="form-control input-md" #password="ngModel" required name="password" type="password" [(ngModel)]="personal.password">   
+                  <div class="alert alert-danger" [hidden]="firstname.valid">Confirmar Contraseña</div>
+              </div>
+
+              <div class="form-group">
+                  <label class="control-label" for="firstname">Usuario</label>  
+                  <input class="form-control input-md" #username="ngModel" required name="username" type="text" placeholder="Usuario" [(ngModel)]="personal.username">   
+                  <div class="alert alert-danger" [hidden]="firstname.valid">Usuario es requerido</div>
+              </div>
+
+              <div class="form-group">
+                  <label class="control-label" for="firstname">Telefono</label>  
+                  <input class="form-control input-md" #phone="ngModel" required name="phone" type="text" placeholder="Telefono" [(ngModel)]="personal.phone">   
+                  <div class="alert alert-danger" [hidden]="firstname.valid">Telefono es requerido</div>
+              </div>
+              
+                  
+              <div class="form-group text-center">
+                  <button class="btn btn-success btn-outline-rounded btn-info" [disabled]="!personalForm.valid" (click)="goToNext(personalForm)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+              </div>
+          </div>
+
+    </form>
+</div>

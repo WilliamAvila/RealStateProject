@@ -1,0 +1,50 @@
+<div class="container col-md-5 ">
+    <form #addressForm="ngForm" novalidate class="form-horizontal">
+
+        <h2 class="head text-center">Informacion de la publicacion</h2>
+        <div class="form-group">
+            <label class="control-label" >Tipo de Inmobilario</label>
+            <select class="form-control" [(ngModel)]="address.tipoInmobiliario" name="tipoInmobiliario">
+                <option *ngFor="let c of types" [value]="c">{{c}} </option>
+            </select>
+                </div>
+        <div class="row">
+            <div class='col-xs-12 col-sm-6'>
+                <div class="form-group">
+                    <label class="control-label" for="departamento">Departamento</label>
+                    <select class="form-control" [(ngModel)]="departamento" name="departamento">
+                        <option *ngFor="let c of departamentos" [value]="c">{{c.name}} </option>
+                    </select>
+                </div>
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+                <div class="form-group">
+                    <label class="control-label" for="ciudad">Ciudad</label>
+                    <input class="form-control input-md" #ciudad="ngModel" type="text" name="ciudad" [(ngModel)]="address.ciudad" placeholder="Ciudad">
+                </div>
+                <div class="alert alert-danger" [hidden]="ciudad.valid">Ciudad es requerida</div>
+     
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label class="control-label" for="lastname">Direccion</label>
+            <input required class="form-control input-md" type="select" placeholder="Direccion">
+        </div>
+        
+        <image-upload></image-upload>
+        <div class="form-group">
+            <label class="control-label" for="email">Tipo de Transaccion</label>
+            <select class="form-control input-md" [(ngModel)]="tipoTransaccion" name="tipoTransaccion">
+                <option *ngFor="let c of transactionTypes" [ngValue]="c">{{c.name}}</option>
+            </select>
+        </div>
+        <div class="form-group text-center space-40">
+            <button class="btn btn-outline-rounded btn-secondary" (click)="goToPrevious(workForm)"> <span style="margin-right:10px;"
+                    class="glyphicon glyphicon-arrow-left"></span> Previous</button>
+            <button class="btn btn-outline-rounded btn-info" (click)="goToNext(workForm)"> Next <span style="margin-left:10px;"
+                    class="glyphicon glyphicon-arrow-right"></span></button>
+        </div>
+
+    </form>
+</div>
