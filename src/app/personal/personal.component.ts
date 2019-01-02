@@ -34,7 +34,7 @@ export class PersonalComponent implements OnInit {
   goToNext(form: any) {
       if (this.save(form)) {
           // Navigate to the property page
-          this.router.navigateByUrl('/property-category');
+          this.router.navigateByUrl('/pricing');
       }
   }
 

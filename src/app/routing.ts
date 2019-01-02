@@ -16,6 +16,8 @@ import { LandFormComponent } from './land-form/land-form.component';
 import { WarehouseFormComponent } from './warehouse-form/warehouse-form.component';
 import { BuildingFormComponent } from './building-form/building-form.component';
 import { ShopFormComponent } from './shop-form/shop-form.component';
+import { PreviewComponent } from './preview/preview.component';
+import { PricingComponent } from './pricing/pricing.component';
  
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -33,6 +35,10 @@ const appRoutes: Routes = [
     { path: 'warehouse', component: WarehouseFormComponent},
     { path: 'building', component: BuildingFormComponent},
     { path: 'shop', component: ShopFormComponent},
+
+    { path: 'preview', component: PreviewComponent},
+
+    { path: 'pricing', component: PricingComponent},
     
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

@@ -27,6 +27,8 @@ import { EstateFormComponent } from './estate-form/estate-form.component';
 import { WarehouseFormComponent } from './warehouse-form/warehouse-form.component';
 import { BuildingFormComponent } from './building-form/building-form.component';
 import { ShopFormComponent } from './shop-form/shop-form.component';
+import { PreviewComponent } from './preview/preview.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { ShopFormComponent } from './shop-form/shop-form.component';
     EstateFormComponent,
     WarehouseFormComponent,
     BuildingFormComponent,
-    ShopFormComponent
+    ShopFormComponent,
+    PreviewComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule,

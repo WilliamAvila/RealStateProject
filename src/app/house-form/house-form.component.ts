@@ -35,7 +35,6 @@ export class HouseFormComponent implements OnInit {
       if (!form.valid) {
           return false;
       }
-      
       this.formDataService.setWork(this.workType);
       return true;
   }
@@ -47,9 +46,10 @@ export class HouseFormComponent implements OnInit {
   }
 
   goToNext(form: any) {
+    this.router.navigate(['/preview']);
       if (this.save(form)) {
           // Navigate to the address page
-          this.router.navigate(['/address']);
+          this.router.navigate(['/preview']);
       }
   }
 
