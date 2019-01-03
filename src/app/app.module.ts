@@ -30,6 +30,8 @@ import { ShopFormComponent } from './shop-form/shop-form.component';
 import { PreviewComponent } from './preview/preview.component';
 import { PricingComponent } from './pricing/pricing.component';
 
+import { InternationalPhoneModule } from 'ng4-intl-phone';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +62,8 @@ import { PricingComponent } from './pricing/pricing.component';
     routing,
     ImageUploadModule.forRoot(),
     BsDropdownModule.forRoot(),
-    SlideshowModule
+    SlideshowModule,
+    InternationalPhoneModule
 
   ],
   providers: [{ provide: FormDataService, useClass: FormDataService }],
