@@ -4,7 +4,7 @@
       <h2 class="head">{{title}}</h2>
       <br/>
 
-      <int-phone-prefix [locale]="'es'"></int-phone-prefix>
+      
               <div class="row">
                   <div class='col-xs-12 col-sm-6'>
                       <div class="form-group">
@@ -53,6 +53,8 @@
               <div class="form-group">
                   <label class="control-label" for="firstname">Telefono</label>  
                   <input class="form-control input-md" #phone="ngModel" required name="phone" type="text" placeholder="Telefono" [(ngModel)]="personal.phone">   
+                  <int-phone-prefix [locale]="'es'"></int-phone-prefix>
+                  <int-phone-prefix [locale]="'es'"></int-phone-prefix>
                   <div class="alert alert-danger" [hidden]="firstname.valid">Telefono es requerido</div>
               </div>
               
