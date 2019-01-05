@@ -51,9 +51,11 @@
               </div>
 
               <div class="form-group">
-                  <label class="control-label" for="firstname">Telefono</label>  
+                  <label class="control-label" for="firstname">Telefono 1</label>  
                   <input class="form-control input-md" #phone="ngModel" required name="phone" type="text" placeholder="Telefono" [(ngModel)]="personal.phone">   
+                  <label class="control-label" for="firstname">Telefono 2</label> 
                   <int-phone-prefix [locale]="'es'"></int-phone-prefix>
+                  <label class="control-label" for="firstname">Celular</label> 
                   <int-phone-prefix [locale]="'es'"></int-phone-prefix>
                   <div class="alert alert-danger" [hidden]="firstname.valid">Telefono es requerido</div>
               </div>
