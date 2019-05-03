@@ -19,7 +19,9 @@ export class FormDataService {
             birthday:this.formData.birthday,
             password: this.formData.password,
             username: this.formData.username,
-            phone: this.formData.phone
+            phone: this.formData.phone,
+            phone2: this.formData.phone2,
+            cellphone: this.formData.cellphone
         };
         return personal;
     }
@@ -30,6 +32,10 @@ export class FormDataService {
         this.formData.firstName = data.firstName;
         this.formData.lastName = data.lastName;
         this.formData.email = data.email;
+        this.formData.birthday = data.birthday;
+        this.formData.phone = data.phone;
+        this.formData.phone2 = data.phone2;
+        this.formData.cellphone = data.cellphone;
     }
  
     getWork() : string {

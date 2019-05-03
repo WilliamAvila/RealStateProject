@@ -18,9 +18,12 @@ import { BuildingFormComponent } from './building-form/building-form.component';
 import { ShopFormComponent } from './shop-form/shop-form.component';
 import { PreviewComponent } from './preview/preview.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { UserTypeComponent } from './user-type/user-type.component';
  
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
+
+    { path: 'user-type', component: UserTypeComponent},
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent},
     { path: 'personal', component: PersonalComponent},
@@ -35,6 +38,7 @@ const appRoutes: Routes = [
     { path: 'warehouse', component: WarehouseFormComponent},
     { path: 'building', component: BuildingFormComponent},
     { path: 'shop', component: ShopFormComponent},
+
 
     { path: 'preview', component: PreviewComponent},
 

@@ -30,12 +30,17 @@ export class PersonalComponent implements OnInit {
       this.formDataService.setPersonal(this.personal);
       return true;
   }
+  goToPrevious() {
+        // Navigate to the personal page
+        this.router.navigateByUrl('/user-type');;
+    
+}
 
   goToNext(form: any) {
-      if (this.save(form)) {
+      //if (this.save(form)) {
           // Navigate to the property page
           this.router.navigateByUrl('/pricing');
-      }
+      //}
   }
 
 }

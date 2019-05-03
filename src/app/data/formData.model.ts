@@ -11,6 +11,8 @@ export class FormData {
     birthday: string = '';
     username: string = '';
     phone: string = '';
+    phone2: string = '';
+    cellphone: string = '';
     tipoInmobiliario: string = '';
     departamento: string = '';
     ciudad: string = '';
@@ -38,6 +40,8 @@ export class Personal {
     birthday: string = '';
     username: string = '';
     phone: string = '';
+    phone2: string = '';
+    cellphone: string = '';
 }
  
 export class Address {

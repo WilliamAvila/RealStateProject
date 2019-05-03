@@ -31,6 +31,24 @@ import { PreviewComponent } from './preview/preview.component';
 import { PricingComponent } from './pricing/pricing.component';
 
 import { InternationalPhoneModule } from 'ng4-intl-phone';
+import { FbLoginComponent } from './fb-login/fb-login.component';
+import {
+  SocialLoginModule,
+  AuthServiceConfig,
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+} from "angular5-social-login";
+import { UserTypeComponent } from './user-type/user-type.component';
+export function getAuthServiceConfigs() {
+  let config = new AuthServiceConfig(
+      [
+        {
+          id: FacebookLoginProvider.PROVIDER_ID,
+	      provider: new FacebookLoginProvider("2219580538358204")
+        }
+      ]);
+  return config;
+}
 
 @NgModule({
   declarations: [
@@ -54,7 +72,9 @@ import { InternationalPhoneModule } from 'ng4-intl-phone';
     BuildingFormComponent,
     ShopFormComponent,
     PreviewComponent,
-    PricingComponent
+    PricingComponent,
+    FbLoginComponent,
+    UserTypeComponent  
   ],
   imports: [
     BrowserModule,
@@ -63,10 +83,12 @@ import { InternationalPhoneModule } from 'ng4-intl-phone';
     ImageUploadModule.forRoot(),
     BsDropdownModule.forRoot(),
     SlideshowModule,
-    InternationalPhoneModule
+    InternationalPhoneModule,
+    SocialLoginModule
 
   ],
-  providers: [{ provide: FormDataService, useClass: FormDataService }],
+  providers: [{ provide: FormDataService, useClass: FormDataService },{provide: AuthServiceConfig,useFactory: getAuthServiceConfigs
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
