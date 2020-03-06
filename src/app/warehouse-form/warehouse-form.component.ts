@@ -15,6 +15,7 @@ export class WarehouseFormComponent implements OnInit {
   types = [ "Casa", "Apartamento","Plaza Comercial","Bodega y Almacen"];
   waterTank: string;
   furniture: string;
+  complexType: string;
   complexTypes = [
     {id: 1, name: "Complejo de bodegas o almacenes"},
     {id: 2, name: "Independiente"}

@@ -18,6 +18,7 @@ export class EstateFormComponent implements OnInit {
     {id: 2, name: "Planicie"},
     {id: 3, name: "Montaña y Planicie"}
   ];
+  especificaciones: string;
   amenities = [
     {id: 1, name: "Inmediaciones Carreteras"},
     {id: 2, name: "Fuentes de agua"},

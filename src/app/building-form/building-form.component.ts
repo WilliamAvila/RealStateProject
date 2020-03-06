@@ -15,6 +15,7 @@ export class BuildingFormComponent implements OnInit {
   types = ["Casa", "Apartamento", "Plaza Comercial", "Bodega y Almacen"];
   waterTank: string;
   furniture: string;
+  complexType: string;
   complexTypes = [
     { id: 1, name: "Edificacion Horizontal" },
     { id: 2, name: "Edificacion Vertical" }

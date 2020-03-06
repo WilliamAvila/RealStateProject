@@ -48,6 +48,7 @@ goToNext(form: any) {
 
 mainCategory = {title: 'Atlantida',id: 1};
 subcategory = {itle: 'La Ceiba',parentId: 1};
+SelectedSubCategory: string;
 
 mainGroups = [
   { id: 1, title: 'Atlantida', },

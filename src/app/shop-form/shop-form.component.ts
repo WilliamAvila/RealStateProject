@@ -14,6 +14,7 @@ export class ShopFormComponent implements OnInit {
   types = [ "Casa", "Apartamento","Plaza Comercial","Bodega y Almacen"];
   waterTank: string;
   furniture: string;
+  complexType: string;
   complexTypes = [
     {id: 1, name: "Plaza Comercial/Centro Comercial"},
     {id: 2, name: "Independiente"}

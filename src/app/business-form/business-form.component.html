@@ -85,7 +85,7 @@
             <div class="col">
     
                 <label class="control-label" for="birthday">Ciudad de Ubicacion de la empresa</label>  
-                <select class="form-control" [(ngModel)]="subCategory" name="subCategory">
+                <select class="form-control" [(ngModel)]="SelectedSubCategory" name="subCategory">
                   <option [ngValue]="subcategory" *ngFor="let subcategory of filterSubById(mainCategory.id)">{{subcategory.title}}</option>
                 </select>
                 <div class="alert alert-danger" *ngIf="birthday.invalid  && (birthday.dirty || birthday.touched)">Fecha de nacimiento es requerida</div>

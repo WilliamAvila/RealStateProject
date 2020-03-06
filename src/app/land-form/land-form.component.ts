@@ -17,6 +17,8 @@ export class LandFormComponent implements OnInit {
     {id: 1, name: "Privado"},
     {id: 2, name: "Independiente"}
   ];
+  landType: string;
+  complexType: string;
   landTypes = [
     {id: 1, name: "Residencial"},
     {id: 2, name: "Comercial"}

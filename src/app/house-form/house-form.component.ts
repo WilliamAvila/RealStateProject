@@ -14,6 +14,7 @@ export class HouseFormComponent implements OnInit {
   types = [ "Casa", "Apartamento","Plaza Comercial","Bodega y Almacen"];
   waterTank: string;
   furniture: string;
+  especificaciones: string;
   complexTypes = [
     {id: 1, name: "Complejo de viviendas"},
     {id: 2, name: "Vivienda apartada"}
