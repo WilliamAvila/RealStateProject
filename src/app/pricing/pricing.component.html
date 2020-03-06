@@ -1,71 +1,149 @@
+
 <div class="container">
   <h1 class="text-center">Escoge un Plan</h1>
   <br>
   <br>
-  <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Basico</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">L.150 <small class="text-muted">/ mensual</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>1 publicacion</li>
-          <li>5 fotos por publicacion</li>
-          <li>1 Categoria</li>
-          <li>Ficha de Perfil</li>
-           <br>
-        </ul>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="goToNext(personalForm)" >Ordenar</button>
-      </div>
+  <table class="text-center table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th class="zoom" scope="col">SERVICIOS</th>
+          <th class="zoom table-info" scope="col">BASICO</th>
+          <th class="zoom table-secondary" scope="col">ESTANDAR</th>
+          <th class="zoom table-info" scope="col">EMPRESARIAL</th>
+
+          <th class="zoom table-secondary" scope="col">INMOBILIARIA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="col">Publicaciones</th>
+          <td>1</td>
+          <td>3</td>
+          <td>7</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <th scope="col">Categorias</th>
+          <td>1</td>
+          <td>1</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <th scope="row">Fotos por Publicacion</th>
+          <td >5</td>
+          <td>5</td>
+          <td>8</td>
+          <td>8</td>
+        </tr>
+        <tr>
+            <th scope="row">Videos Por Plan</th>
+            
+             <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+              <th scope="row">Ficha de Perfil</th>
+              <td>Si</td>
+              <td>Si</td>
+              <td>No</td>
+              <td>No</td>
+            </tr>
+            <tr>
+                <th scope="row">Sitio dentro de sitio</th>
+                <td>No</td>
+                <td>No</td>
+                <td>Si</td>
+                <td>Si</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>  <button type="button" class="btn btn-lg btn-block btn-dark" (click)="goToNext(personalForm)" >Elejir</button>
+                </td>
+                <td>  <button type="button" class="btn btn-lg btn-block btn-dark" (click)="goToNext(personalForm)" >Elejir</button>
+                </td>
+                <td>  <button type="button" class="btn btn-lg btn-block btn-dark" (click)="goToNext(personalForm)" >Elejir</button>
+                </td>
+                <td>  <button type="button" class="btn btn-lg btn-block btn-dark" (click)="goToNext(personalForm)" >Elejir</button>
+                </td>
+              </tr>
+      </tbody>
+    </table>
+  <!--<div class="card-deck mb-3 text-center">
+      <div class="card mb-4 shadow-sm">
+    <div class="card-header">
+      <h3>Servicios</h3>
     </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Normal</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">L.300 <small class="text-muted">/ mensual</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>3 publicaciones</li>
-          <li>5 fotos por publicacion</li>
-          <li>1 Categoria</li>
-          <li>Ficha de Perfil</li>
-          <br>
-        </ul>
-        <button type="button" class="btn btn-lg btn-block btn-primary" (click)="goToNext(personalForm)">Ordenar</button>
-      </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item " >Publicaciones</li>
+      <li class="list-group-item list-group-item-dark">Categorias</li>
+      <li class="list-group-item">Fotos por Publicacion</li>
+      <li class="list-group-item list-group-item-dark">Videos Por Plan</li>
+      <li class="list-group-item">Ficha de Perfil</li>
+      <li class="list-group-item list-group-item-dark">Sitio dentro de sitio</li>
+    </ul>
     </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Premium</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">L.500 <small class="text-muted">/ mensual</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>7 publicaciones</li>
-          <li>8 fotos por publicacion</li>
-          <li>3 Categorias</li>
-          <li>1 video</li>
-          <li>Sitio dentro de Sitio</li>
-        </ul>
-        <button type="button" class="btn btn-lg btn-block btn-primary"(click)="goToNext(personalForm)" >Ordenar</button>
-      </div>
+     <div class="card mb-4 shadow-sm bg-danger zoom">
+    <div class="card-header">
+      <h3>Basico</h3>
     </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Ejecutivo</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">L.800 <small class="text-muted">/ mensual</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>15 publicaciones</li>
-          <li>8 fotos por publicacion</li>
-          <li>4 Categorias</li>
-          <li>2 videos</li>
-          <li>Sitio dentro de Sitio</li>
-        </ul>
-        <button type="button" class="btn btn-lg btn-block btn-primary" (click)="goToNext(personalForm)" >Ordenar</button>
-      </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">1</li>
+      <li class="list-group-item list-group-item-danger">1</li>
+      <li class="list-group-item">5</li>
+      <li class="list-group-item list-group-item-danger">0</li>
+      <li class="list-group-item">Si</li>
+      <li class="list-group-item list-group-item-danger">No</li>
+    </ul>
+               <h1 class="card-title pricing-card-title">L.150 <small class="text-muted">/ Mes</small></h1>
+       <button type="button" class="btn btn-lg btn-block btn-dark" (click)="goToNext(personalForm)" >Elejir</button>
     </div>
-  </div>
+    <div class="card mb-4 shadow-sm bg-primary zoom">
+      <div class="card-header">
+        <h3>Estandar</h3>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">3</li>
+        <li class="list-group-item list-group-item-primary">1</li>
+        <li class="list-group-item">5</li>
+        <li class="list-group-item list-group-item-primary">0</li>
+        <li class="list-group-item">Si</li>
+        <li class="list-group-item list-group-item-primary">No</li>
+      </ul>
+                 <h1 class="card-title pricing-card-title">L.300 <small class="text-muted">/ Mes</small></h1>
+         <button type="button" class="btn btn-lg btn-block btn-dark" (click)="goToNext(personalForm)" >Elejir</button>
+      </div>
+      <div class="card mb-4 shadow-sm bg-info zoom">
+        <div class="card-header">
+          <h3>Empresarial </h3>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">7</li>
+          <li class="list-group-item list-group-item-info">3</li>
+          <li class="list-group-item">8</li>
+          <li class="list-group-item list-group-item-info">1</li>
+          <li class="list-group-item">No</li>
+          <li class="list-group-item list-group-item-info">Si</li>
+        </ul>
+                   <h1 class="card-title pricing-card-title">L.500 <small class="text-muted">/ Mes</small></h1>
+           <button type="button" class="btn btn-lg btn-block btn-dark" (click)="goToNext(personalForm)" >Elejir</button>
+        </div>
+        <div class="card mb-4 shadow-sm bg-warning zoom">
+          <div class="card-header">
+            <h3>Immobiliaria</h3>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">15</li>
+            <li class="list-group-item list-group-item-warning">4</li>
+            <li class="list-group-item">8</li>
+            <li class="list-group-item list-group-item-warning">2</li>
+            <li class="list-group-item">No</li>
+            <li class="list-group-item list-group-item-warning">Si</li>
+          </ul>
+            <h1 class="card-title pricing-card-title">L.800 <small class="text-muted">/ Mes</small></h1>
+             <button type="button" class="btn btn-lg btn-block btn-dark" (click)="goToNext(personalForm)" >Elejir</button>
+          </div>
+  </div>--->
 </div>

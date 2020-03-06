@@ -1,17 +1,77 @@
 <div class="container col-md-5 ">
   <form class="form-horizontal">
 
-    <h3 class="head text-center">Especificaciones del Mobiliario</h3>
+    <h3 class="head text-center">Especificaciones de la Almacen</h3>
 
     <div class="form-group">
-      <label class="control-label" for="email">Tipo del Complejo</label>
+      <label class="control-label" for="email">Elija el tipo de acomodacion </label>
       <select class="form-control input-md" [(ngModel)]="complexType" name="tipoComplejo">
         <option *ngFor="let c of complexTypes" [ngValue]="c">{{c.name}}</option>
       </select>
     </div>
 
+    <h3 class="head text-center">Elije las Caracteristicas que posee la Almacen</h3>
+    <div class="row">
+      <div class='col-xs-12 col-sm-6'>
+        <div class="form-group">
+          <label class="control-label" for="firstname">Numero de Oficinas(Si Aplica)</label>
+          <input class="form-control input-md" type="number" min="0" placeholder="Oficinas">
 
-    <h3 class="head text-center">Amenidades que posee el Complejo</h3>
+        </div>
+      </div>
+      
+      <div class='col-xs-12 col-sm-6'>
+        <div class="form-group">
+          <label class="control-label" for="lastname">Numero de Baños(Si Aplica)</label>
+          <input class="form-control input-md" type="number" min="0" placeholder="Baños">
+
+        </div>
+      </div>
+      <div class='col-xs-12 col-sm-6'>
+        <div class="form-group">
+          <label class="control-label" for="lastname">Numero de Salas(Si Aplica)</label>
+          <input class="form-control input-md" type="number" min="0" placeholder="Salas">
+
+        </div>
+      </div>
+    </div>
+    <div>
+      <label class="control-label">Tamaño en Metros Cuadrados</label>
+      <input class="form-control input-md" type="text" mask="separator.2" thousandSeparator="," placeholder="Local Comercial">
+    </div>
+    <br>
+    <br>
+    <h5 >Elije las Areas que posee la Almacen</h5>
+
+    <div class="form-group">
+
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="waterTank"> Areas Comunes
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="furniture"> Parqueo
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="oficinas"> Oficinas Administrativas
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="esparcimiento"> Zona de esparcimiento
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="cafeteria"> Cafeteria
+        </label>
+      </div>
+    </div>
+    <h3 class="head text-center">Amenidades que posee </h3>
 
     <div class="form-group">
       <div class="radio">
@@ -21,7 +81,12 @@
       </div>
       <div class="radio">
         <label>
-          <input type="checkbox" name="waterTank"> Tanque de Agua/Pozo
+          <input type="checkbox" name="waterTank"> Tanque de Agua
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="waterTank"> Pozo
         </label>
       </div>
       <div class="radio">
@@ -29,18 +94,9 @@
           <input type="checkbox" name="furniture"> Amueblado
         </label>
       </div>
-      <div class="radio">
-        <label>
-          <input type="checkbox" name="oficinas"> Oficinas Administrativas
-        </label>
-      </div>
+
     </div>
 
-
-    <div>
-      <label class="control-label">Metros Cuadrados de la bodega o almacen</label>
-      <input class="form-control input-md" type="number" placeholder="Bodega o almacen">
-    </div>
 
     <div class="row">
       <div class='col-md-12'>
@@ -48,22 +104,19 @@
         <textarea class="form-control" rows="3"></textarea>
       </div>
     </div>
-    <h3 class="head text-center">Precio</h3>
+    <h3 class="head text-center">Precio y otros cargos</h3>
     <div class="row">
       <div class='col-xs-12 col-sm-6'>
-        <div class="form-group">
-          <label class="control-label">Precio</label>
-          <input class="form-control input-md" type="number" placeholder="Precio">
+        <form class="form-inline">
+          <div class="form-group mb-2">
+            Monto
+          </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <input class="form-control input-md" type="text" mask="separator.2" thousandSeparator="," placeholder="Precio">
         </div>
-      </div>
-      <div class='col-xs-12 col-sm-6'>
-        <div class="form-group">
-          <label class="control-label">Frecuencia</label>
-          <input class="form-control input-md" type="text" placeholder="Frecuencia">
-        </div>
+      </form>
       </div>
     </div>
-    <h3 class="head text-center">Otros Cargos</h3>
     <app-other-charges class="todos"></app-other-charges>
 
     <div class="form-group text-center space-40">

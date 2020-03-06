@@ -12,25 +12,35 @@ export class OtherChargesComponent implements OnInit {
   todos: any;
   todoObj: any;
   frecuencies = ["Mensual", "Anual"];
-  selectedFrecuency: string;
+  selectedFrecuency: string = null;
+  selectedFrecuency1: string = null;
+  reembolsable: boolean = false;
+
+  selectedFrecuency2: string = null;
+
+  selectedFrecuency3: string = null;
 
   constructor() {
     this.newTodo = '';
-    this.price = 0;
     this.todos = [];
   }
+  isOn:any;
 
   addTodo(event) {
     this.todoObj = {
       newTodo: this.newTodo,
       price: this.price,
       frecuency: this.selectedFrecuency,
-      completed: false
+      completed: false,
+      reembolsable: this.reembolsable
     }
+    console.log(this.todoObj);
+    this.isOn = false
     this.todos.push(this.todoObj);
     this.newTodo = '';
     this.price = 0;
     this.selectedFrecuency = '';
+    this.reembolsable = false;
     event.preventDefault();
   }
 

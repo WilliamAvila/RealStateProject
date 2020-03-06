@@ -13,6 +13,7 @@ export class PersonalComponent implements OnInit {
   title = 'Informacion Personal';
   personal: Personal;
   form: any;
+  submitted: boolean;
   
   constructor(private router: Router, private formDataService: FormDataService) {
   }
@@ -20,13 +21,15 @@ export class PersonalComponent implements OnInit {
   ngOnInit() {
       this.personal = this.formDataService.getPersonal();
       console.log('Personal feature loaded!');
+      this.submitted = false;
   }
 
   save(form: any): boolean {
       if (!form.valid) {
+        this.submitted = false;
           return false;
       }
-          
+       this.submitted = true;   
       this.formDataService.setPersonal(this.personal);
       return true;
   }

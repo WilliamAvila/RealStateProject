@@ -24,22 +24,22 @@
       <br/>
       <div class="row ">
         <div class="col">
-            <label class="control-label" for="firstname">Nombre</label>  
+            <label class="control-label" for="firstname">Nombre de la Empresa</label>  
             <input class="form-control input-md" #firstname="ngModel" required name="firstname" type="text" placeholder="Nombre" [(ngModel)]="personal.firstName">   
             <div class="alert alert-danger"  *ngIf="submitted && firstname.touched"> Nombre es requerido</div>
    
         </div>
         <div class="col">
 
-            <label class="control-label" for="birthday">Fecha de Nacimiento</label>  
+            <label class="control-label" for="birthday">Fecha de Fundacion</label>  
             <input class="form-control input-md" #birthday="ngModel" required name="birthday" type="date" placeholder="Fecha de Nacimiento" [(ngModel)]="personal.birthday">   
             <div class="alert alert-danger" *ngIf="birthday.invalid  && (birthday.dirty || birthday.touched)">Fecha de nacimiento es requerida</div>
 
         </div>
       </div>
       <br>
-      <br>
-      <br>
+      
+      
       <div class="row ">
           <div class="col">
               <label class="control-label" for="email">Correo Electronico</label>
@@ -55,6 +55,7 @@
        
           </div>
         </div>
+        <br>
 
         <div class="row ">
             <div class="col">
@@ -68,6 +69,27 @@
                   <input class="form-control input-md" #password="ngModel" required name="password" type="password" [(ngModel)]="personal.password">   
                     <!--  <div class="alert alert-danger" [hidden]="password.valid">Confirmar Contraseña</div>-->
            
+            </div>
+          </div>
+<br>
+          <div class="row ">
+            <div class="col">
+                <label class="control-label" for="firstname">Departamento de Ubicacion de la empresa</label>  
+                <select class="form-control" [(ngModel)]="mainCategory" name="mainCategory">
+                  <option disabled [ngValue]="null">-/-</option>
+                  <option [ngValue]="category" *ngFor="let category of mainGroups">{{category.title}}</option>
+                </select>
+                <div class="alert alert-danger"  *ngIf="submitted && firstname.touched"> Nombre es requerido</div>
+       
+            </div>
+            <div class="col">
+    
+                <label class="control-label" for="birthday">Ciudad de Ubicacion de la empresa</label>  
+                <select class="form-control" [(ngModel)]="subCategory" name="subCategory">
+                  <option [ngValue]="subcategory" *ngFor="let subcategory of filterSubById(mainCategory.id)">{{subcategory.title}}</option>
+                </select>
+                <div class="alert alert-danger" *ngIf="birthday.invalid  && (birthday.dirty || birthday.touched)">Fecha de nacimiento es requerida</div>
+    
             </div>
           </div>
           <br><br><br>
@@ -91,19 +113,19 @@
               <h5>Extensiones de Redes Sociales</h5></div>
                     <div class="row text-center">
                         <div class="col">
-                  <span><a href="#" class="fa fa-facebook"></a></span> <input type="text" class=" input-md">
+                  <span><a href="#" class="fa fa-facebook"></a></span> <input type="text" placeholder="opcional" class=" input-md">
                    </div> 
                    <div class="col">
-                      <span><a href="#" class="fa fa-twitter"></a></span> <input type="text" class=" input-md">
+                      <span><a href="#" class="fa fa-twitter"></a></span> <input type="text" placeholder="opcional" class=" input-md">
                        </div>         
                 </div>
 
                 <div class="row text-center">
                     <div class="col">
-              <span><a href="#" class="fa fa-instagram"></a></span> <input type="text" class=" input-md">
+              <span><a href="#" class="fa fa-instagram"></a></span> <input type="text" placeholder="opcional"class=" input-md">
                </div> 
                <div class="col">
-                  <span><a href="#" class="fa fa-pinterest"></a></span> <input type="text" class=" input-md">
+                  <span><a href="#" class="fa fa-pinterest"></a></span> <input type="text" placeholder="opcional" class=" input-md">
                    </div>         
             </div>
             <br>

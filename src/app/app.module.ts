@@ -29,16 +29,18 @@ import { BuildingFormComponent } from './building-form/building-form.component';
 import { ShopFormComponent } from './shop-form/shop-form.component';
 import { PreviewComponent } from './preview/preview.component';
 import { PricingComponent } from './pricing/pricing.component';
-
 import { InternationalPhoneModule } from 'ng4-intl-phone';
 import { FbLoginComponent } from './fb-login/fb-login.component';
 import {
   SocialLoginModule,
   AuthServiceConfig,
-  GoogleLoginProvider,
   FacebookLoginProvider,
 } from "angular5-social-login";
 import { UserTypeComponent } from './user-type/user-type.component';
+import { PostsListComponent } from './posts-list/posts-list.component';
+import { ApartmentFormComponent } from './apartment-form/apartment-form.component';
+import { NgxMaskModule } from 'ngx-mask';
+import { BusinessFormComponent } from './business-form/business-form.component';
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
       [
@@ -74,7 +76,10 @@ export function getAuthServiceConfigs() {
     PreviewComponent,
     PricingComponent,
     FbLoginComponent,
-    UserTypeComponent  
+    UserTypeComponent,
+    PostsListComponent,
+    ApartmentFormComponent,
+    BusinessFormComponent  
   ],
   imports: [
     BrowserModule,
@@ -84,7 +89,8 @@ export function getAuthServiceConfigs() {
     BsDropdownModule.forRoot(),
     SlideshowModule,
     InternationalPhoneModule,
-    SocialLoginModule
+    SocialLoginModule,
+    NgxMaskModule.forRoot()
 
   ],
   providers: [{ provide: FormDataService, useClass: FormDataService },{provide: AuthServiceConfig,useFactory: getAuthServiceConfigs

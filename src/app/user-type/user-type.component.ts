@@ -12,12 +12,18 @@ export class UserTypeComponent implements OnInit {
   constructor(private router: Router, private formDataService: FormDataService) {
   }
 
+  tipo: string ;
   ngOnInit() {
   }
 
   goToNext() {
         // Navigate to the property page
-        this.router.navigateByUrl('/personal');
+        if(this.tipo === "personal"){
+          this.router.navigateByUrl('/personal');
+        }else if (this.tipo === "business") {
+          this.router.navigateByUrl('/business');
+        }
+      
     
 }
 

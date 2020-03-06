@@ -1,31 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormDataService } from '../data/formData.service';
-
 @Component({
-  selector: 'app-estate-form',
-  templateUrl: './estate-form.component.html',
-  styleUrls: ['./estate-form.component.css']
+  selector: 'app-apartment-form',
+  templateUrl: './apartment-form.component.html',
+  styleUrls: ['./apartment-form.component.css']
 })
-export class EstateFormComponent implements OnInit {
+export class ApartmentFormComponent implements OnInit {
   workType: string;
   form: any;
   selectedValue: string;
+  types = [ "Casa", "Apartamento","Plaza Comercial","Bodega y Almacen"];
   waterTank: string;
   furniture: string;
-  estateTypes = [
-    {id: 1, name: "Montaña"},
-    {id: 2, name: "Planicie"},
-    {id: 3, name: "Montaña y Planicie"}
-  ];
-  amenities = [
-    {id: 1, name: "Inmediaciones Carreteras"},
-    {id: 2, name: "Fuentes de agua"},
-    {id: 2, name: "Montaña y Planicie"},
-    {id: 2, name: "Cultivadas"},
-    {id: 2, name: "Infraestructura para cria de animales"},
-    {id: 2, name: "Cercado perimetral"},
-
+  complexTypes = [
+    {id: 1, name: "Complejo de Apartamentos"},
+    {id: 2, name: "Apartamento Independiente"}
   ];
   transactionTypes = [
     {id: 1, name: "Alquilar"},
@@ -44,7 +34,6 @@ export class EstateFormComponent implements OnInit {
       if (!form.valid) {
           return false;
       }
-      
       this.formDataService.setWork(this.workType);
       return true;
   }
@@ -56,9 +45,10 @@ export class EstateFormComponent implements OnInit {
   }
 
   goToNext(form: any) {
+    this.router.navigate(['/preview']);
       if (this.save(form)) {
           // Navigate to the address page
-          this.router.navigate(['/address']);
+          this.router.navigate(['/preview']);
       }
   }
 

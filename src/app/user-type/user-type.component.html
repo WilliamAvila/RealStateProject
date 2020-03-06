@@ -9,10 +9,10 @@
 <h2>Tipo de Cuenta</h2>
       <br/>
 <div class="radio">
-  <label><input type="radio" name="optradio" checked>Personal</label>
+  <label><input [(ngModel)]="tipo" type="radio" name="tipoPersonal"  value="personal" checked>Personal</label>
 </div>
 <div class="radio">
-  <label><input type="radio" name="optradio">Empresarial</label>
+  <label><input [(ngModel)]="tipo" type="radio" name="tipoPersonal" value="business">Empresarial</label>
 </div>
 
 <div class="form-group text-center">
