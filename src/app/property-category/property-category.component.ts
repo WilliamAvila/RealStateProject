@@ -17,6 +17,9 @@ export class PropertyCategoryComponent implements OnInit {
     types = ["Casa", "Apartamento", "Local Comercial", "Bodega o Almacen", "Edificio", "Terreno", "Finca"];
     waterTank: string;
     furniture: string;
+    especificaciones: string;
+    tipoTransaccion: string;
+    selectedSubCategory: string;
     complexTypes = [
         { id: 1, name: "Complejo de Viviendas" },
         { id: 2, name: "Vivienda Independiente" }
@@ -88,7 +91,7 @@ export class PropertyCategoryComponent implements OnInit {
         return this.ciudades.filter(item => item.parentId === selectedDepartamentoId);
     };
   mainCategory = {title: 'Atlantida',id: 1};
-  subcategory = {itle: 'La Ceiba',parentId: 1};
+  subcategory = {title: 'La Ceiba',parentId: 1};
 
   mainGroups = [
     { id: 1, title: 'Atlantida', },
@@ -422,7 +425,7 @@ export class PropertyCategoryComponent implements OnInit {
 
     
 
-    goToNext(form: any) {
+    goToNext() {
 
       
         //if (this.save(form)) {

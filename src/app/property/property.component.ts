@@ -16,6 +16,8 @@ export class PropertyComponent implements OnInit {
   types = [ "Casa", "Apartamento","Plaza Comercial","Bodega y Almacen"];
   waterTank: string;
   furniture: string;
+  especificaciones: string;
+  tipoTransaccion: string;
   complexTypes = [
     {id: 1, name: "Complejo de Viviendas"},
     {id: 2, name: "Vivienda Independiente"}

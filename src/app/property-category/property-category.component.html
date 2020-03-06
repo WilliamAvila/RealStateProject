@@ -27,7 +27,7 @@
             <div class='col-xs-12 col-sm-6'>
                 <div class="form-group">
                     <label class="control-label" for="ciudades">Ciudad</label>
-                    <select class="form-control" [(ngModel)]="subCategory" name="subCategory">
+                    <select class="form-control" [(ngModel)]="selectedSubCategory" name="subCategory">
                             <option [ngValue]="subcategory" *ngFor="let subcategory of filterSubById(mainCategory.id)">{{subcategory.title}}</option>
                           </select></div>
           
@@ -50,9 +50,9 @@
         <image-upload></image-upload>
 
         <div class="form-group text-center space-40">
-            <button class="btn btn-outline-rounded btn-secondary" (click)="goToPrevious(workForm)"> <span style="margin-right:10px;"
+            <button class="btn btn-outline-rounded btn-secondary" (click)="goToPrevious(null)"> <span style="margin-right:10px;"
                     class="glyphicon glyphicon-arrow-left"></span> Previous</button>
-            <button class="btn btn-outline-rounded btn-info" (click)="goToNext(workForm)"> Next <span style="margin-left:10px;"
+            <button class="btn btn-outline-rounded btn-info" (click)="goToNext()"> Next <span style="margin-left:10px;"
                     class="glyphicon glyphicon-arrow-right"></span></button>
         </div>
 
