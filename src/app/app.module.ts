@@ -41,6 +41,7 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { ApartmentFormComponent } from './apartment-form/apartment-form.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { BusinessFormComponent } from './business-form/business-form.component';
+import { PrivateOfficeComponent } from './private-office/private-office.component';
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
       [
@@ -79,7 +80,8 @@ export function getAuthServiceConfigs() {
     UserTypeComponent,
     PostsListComponent,
     ApartmentFormComponent,
-    BusinessFormComponent  
+    BusinessFormComponent,
+    PrivateOfficeComponent  
   ],
   imports: [
     BrowserModule,

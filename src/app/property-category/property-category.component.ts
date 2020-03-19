@@ -14,7 +14,9 @@ export class PropertyCategoryComponent implements OnInit {
     form: any;
     postName: any;
     selectedType: string;
-    types = ["Casa", "Apartamento", "Local Comercial", "Bodega o Almacen", "Edificio", "Terreno", "Finca"];
+    types = [{value:"house",text:"Casa"}, {value:"apartment",text:"Apartamento"}, {value:"shop",text:"Local Comercial"}, {value:"",text:"Plaza Comercial"}, {value:"warehouse",text:"Bodega o Almacen"}, {value:"building",text:"Edificio"}, {value:"land",text:"Terreno"}, {value:"estate",text:"Finca"}, {value:"executive-offices",text:"Oficinas Ejecutivas"}];
+    officeTypes = [{value:"private-office",text:"Oficina Privada"}, {value:"floor-office",text:"Piso de oficinas privadas"}, {value:"cowork",text:"Espacio de trabajo"},{value:"meeting-rooms",text:"Salas de reunión"}, {value:"event-rooms",text:"Salón de eventos"}, {value:"auditorium",text:"Auditorio"}];
+    officeType: string;
     waterTank: string;
     furniture: string;
     especificaciones: string;
@@ -430,21 +432,9 @@ export class PropertyCategoryComponent implements OnInit {
       
         //if (this.save(form)) {
         // Navigate to the address page
+        const route = this.address.tipoInmobiliario === 'executive-offices' ? this.officeType : this.address.tipoInmobiliario;
             console.log(this.address.tipoInmobiliario);
-            if (this.address.tipoInmobiliario === 'Apartamento')
-            this.router.navigate(['/apartment']);
-            if (this.address.tipoInmobiliario === 'Casa')
-                this.router.navigate(['/house']);
-            if (this.address.tipoInmobiliario === 'Edificio')
-                this.router.navigate(['/building']);
-            if (this.address.tipoInmobiliario === 'Local Comercial')
-                this.router.navigate(['/shop']);
-            if (this.address.tipoInmobiliario === 'Bodega o Almacen')
-                this.router.navigate(['/warehouse']);
-            if (this.address.tipoInmobiliario === 'Finca')
-                this.router.navigate(['/estate']);
-            if (this.address.tipoInmobiliario === 'Terreno')
-                this.router.navigate(['/land']);
+            this.router.navigate([`/${route}`]);
        //}
 
     }

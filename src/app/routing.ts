@@ -21,6 +21,8 @@ import { PricingComponent } from './pricing/pricing.component';
 import { UserTypeComponent } from './user-type/user-type.component';
 import {ApartmentFormComponent} from './apartment-form/apartment-form.component';
 import {BusinessFormComponent} from './business-form/business-form.component';
+import { PrivateOfficeComponent } from './private-office/private-office.component';
+
  
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -40,6 +42,7 @@ const appRoutes: Routes = [
     { path: 'warehouse', component: WarehouseFormComponent},
     { path: 'building', component: BuildingFormComponent},
     { path: 'shop', component: ShopFormComponent},
+    { path: 'private-office', component: PrivateOfficeComponent},
 
     { path: 'apartment', component: ApartmentFormComponent},
 

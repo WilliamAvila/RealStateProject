@@ -5,8 +5,14 @@
         <div class="form-group">
             <label class="control-label" >Elige el tipo de inmobiliario que deseas publicar</label>
             <select class="form-control" [(ngModel)]="address.tipoInmobiliario" name="tipoInmobiliario">
-                <option *ngFor="let c of types" [value]="c">{{c}} </option>
+                <option *ngFor="let c of types" [value]="c.value">{{c.text}} </option>
             </select>
+            <div *ngIf="address.tipoInmobiliario === 'executive-offices'">
+                <label class="control-label" >Elige el tipo de acomodacion de la Oficina Ejecutiva</label>
+                <select class="form-control" [(ngModel)]="officeType" name="officeType">
+                    <option *ngFor="let c of officeTypes" [value]="c.value">{{c.text}} </option>
+                </select>
+            </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="email">Que desea hacer con su Inmobiliario</label>
