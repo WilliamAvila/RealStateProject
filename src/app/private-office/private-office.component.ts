@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivateOfficeComponent implements OnInit {
 
-  constructor() { }
 
+  hasFurniture = false;
+  hasBathrooms = false;
+  hasMeetingRooms = false;
+  hasPrivateParking = false;
+  constructor() { }
   ngOnInit() {
   }
 
