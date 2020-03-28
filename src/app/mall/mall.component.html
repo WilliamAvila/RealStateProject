@@ -1,0 +1,146 @@
+<div class="container col-md-5 ">
+  <form class="form-horizontal">
+
+    <h3 class="head text-center">Especificaciones de la Plaza Comercial</h3>
+
+    <div class="form-group">
+      <label class="control-label" for="email">Elija el tipo de acomodacion </label>
+      <select class="form-control input-md" [(ngModel)]="complexType" name="tipoComplejo">
+        <option *ngFor="let c of complexTypes" [ngValue]="c">{{c.name}}</option>
+      </select>
+    </div>
+
+
+    <h3 class="head text-center">Elije las Caracteristicas que posee</h3>
+    <div class="row">
+      <div class='col-xs-12 col-sm-6'>
+        <div class="form-group">
+          <label class="control-label" for="firstname">Numero de Locales</label>
+          <input class="form-control input-md" type="number" min="0" >
+
+        </div>
+      </div>
+      
+      <div class='col-xs-12 col-sm-6'>
+        <div class="form-group">
+          <label class="control-label" for="lastname">Metros Cuadrados en Locales</label>
+          <input class="form-control input-md" type="number" min="0" suffix="M2" mask="separator.2" placeholder="Suma total de metros cuadrados en locales">
+
+        </div>
+      </div>
+    </div>
+    <h3 class="head text-center">Elije las Areas Comunes</h3>
+
+    <ul>
+      <li><label class="radio-inline"><input type="checkbox" name="optradio" >Vestibulo</label></li>
+
+     <li><label class="radio-inline"><input type="checkbox" name="optradio" >Recepcion</label></li>
+     
+     <li><label class="radio-inline"><input type="checkbox" name="optradio" >Cafetería</label></li>
+
+     <li><label class="radio-inline"><input type="checkbox" name="optradio" >Food Court</label></li>
+
+     <li><label class="radio-inline"><input type="checkbox" name="optradio" >Lounge</label></li>
+
+     <li><label class="radio"><input type="checkbox" [(ngModel)]="hasBathrooms" name="optradio" >Baños </label><input *ngIf="hasBathrooms" type="number"></li>
+
+     <li><label class="radio-inline"><input type="checkbox" name="optradio" >Terraza</label></li>
+
+     <li><label class="radio-inline"><input type="checkbox" name="optradio" >Zona de esparcimiento</label></li>
+     
+     <li><label class="radio"><input type="checkbox" [(ngModel)]="hasPrivateParking" name="optradio" >Parqueo privado </label><input *ngIf="hasPrivateParking" type="number"></li>
+
+     <li><label class="radio-inline"><input type="checkbox" name="optradio" >Helipuerto</label></li>
+   
+   </ul>
+
+
+    <h3 class="head text-center">Elije las Amenidades que posee</h3>
+
+    <div class="form-group">
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="elevator"> Elevadores
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="generator"> Generador Electrico
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="waterTank"> Tanque de Agua
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="pozo"> Pozo
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="airConditioning"> Áreas climatizadas
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="receptionService"> Servicio de recepcion
+        </label>
+      </div>
+    <div class="radio">
+        <label>
+          <input type="checkbox" name="valetParking"> Valet Parking
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="cleaning"> Limpieza
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="maintanance"> Mantenimiento
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="checkbox" name="catering"> Catering
+        </label>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class='col-md-12'>
+        <label class="control-label">Informacion Adicional</label>
+        <textarea class="form-control" rows="3"></textarea>
+      </div>
+    </div>
+    <h3 class="head text-center">Precio y otros cargos</h3>
+    <div class="row">
+      <div class='col-xs-12 col-sm-6'>
+        <form class="form-inline">
+          <div class="form-group mb-2">
+            Monto
+          </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <input class="form-control input-md" type="text" mask="separator.2" thousandSeparator="," placeholder="Precio">
+        </div>
+      </form>
+      </div>
+    </div>
+    <h3 class="head text-center">Otros Cargos</h3>
+    <app-other-charges class="todos"></app-other-charges>
+
+    <div class="form-group text-center space-40">
+      <button class="btn btn-outline-rounded btn-secondary" (click)="goToPrevious(null)"> <span style="margin-right:10px;"
+          class="glyphicon glyphicon-arrow-left"></span> Previous</button>
+      <button class="btn btn-outline-rounded btn-info" (click)="goToNext(null)"> Next <span style="margin-left:10px;"
+          class="glyphicon glyphicon-arrow-right"></span></button>
+    </div>
+
+  </form>
+</div>

@@ -45,6 +45,9 @@ import { PrivateOfficeComponent } from './private-office/private-office.componen
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { PrivateOfficeComplexComponent } from './private-office-complex/private-office-complex.component';
 import { MeetingRoomComponent } from './meeting-room/meeting-room.component';
+import { MallComponent } from './mall/mall.component';
+import { AuditoriumComponent } from './auditorium/auditorium.component';
+import { EventHallComponent } from './event-hall/event-hall.component';
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -88,7 +91,10 @@ export function getAuthServiceConfigs() {
     PrivateOfficeComponent,
     WorkspaceComponent,
     PrivateOfficeComplexComponent,
-    MeetingRoomComponent
+    MeetingRoomComponent,
+    MallComponent,
+    AuditoriumComponent,
+    EventHallComponent
   ],
   imports: [
     BrowserModule,
