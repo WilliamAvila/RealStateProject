@@ -1,10 +1,8 @@
 import { Routes, RouterModule } from '@angular/router';
- 
-import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { PersonalComponent }    from './personal/personal.component';
-import { PropertyComponent }        from './property/property.component';
+import { PersonalComponent } from './personal/personal.component';
+import { PropertyComponent } from './property/property.component';
 import { HomeComponent } from './home/home.component';
 import { ValuesComponent } from './values/values.component';
 import { MissionComponent } from './mission/mission.component';
@@ -22,40 +20,38 @@ import { UserTypeComponent } from './user-type/user-type.component';
 import {ApartmentFormComponent} from './apartment-form/apartment-form.component';
 import {BusinessFormComponent} from './business-form/business-form.component';
 import { PrivateOfficeComponent } from './private-office/private-office.component';
+import { WorkspaceComponent } from './workspace/workspace.component';
+import { PrivateOfficeComplexComponent } from './private-office-complex/private-office-complex.component';
+import { MeetingRoomComponent } from './meeting-room/meeting-room.component';
 
- 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
-
-    { path: 'user-type', component: UserTypeComponent},
+    { path: 'user-type', component: UserTypeComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent},
-    { path: 'personal', component: PersonalComponent},
-    { path: 'property', component: PropertyComponent},
-    { path: 'property-category', component: PropertyCategoryComponent},
-    { path: 'about', component: AboutComponent},
-    { path: 'mission', component: MissionComponent},
-    { path: 'values', component: ValuesComponent},
-    { path: 'house', component: HouseFormComponent},
-    { path: 'estate', component: EstateFormComponent},
-    { path: 'land', component: LandFormComponent},
-    { path: 'warehouse', component: WarehouseFormComponent},
-    { path: 'building', component: BuildingFormComponent},
-    { path: 'shop', component: ShopFormComponent},
-    { path: 'private-office', component: PrivateOfficeComponent},
-
-    { path: 'apartment', component: ApartmentFormComponent},
-
-    { path: 'business', component: BusinessFormComponent},
-
-
-    { path: 'preview', component: PreviewComponent},
-
-    { path: 'pricing', component: PricingComponent},
-    
+    { path: 'register', component: RegisterComponent },
+    { path: 'personal', component: PersonalComponent },
+    { path: 'property', component: PropertyComponent },
+    { path: 'property-category', component: PropertyCategoryComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'mission', component: MissionComponent },
+    { path: 'values', component: ValuesComponent },
+    { path: 'house', component: HouseFormComponent },
+    { path: 'estate', component: EstateFormComponent },
+    { path: 'land', component: LandFormComponent },
+    { path: 'warehouse', component: WarehouseFormComponent },
+    { path: 'building', component: BuildingFormComponent },
+    { path: 'shop', component: ShopFormComponent },
+    { path: 'private-office', component: PrivateOfficeComponent },
+    { path: 'apartment', component: ApartmentFormComponent },
+    { path: 'business', component: BusinessFormComponent },
+    { path: 'preview', component: PreviewComponent },
+    { path: 'pricing', component: PricingComponent },
+    { path: 'workspace', component: WorkspaceComponent },
+    { path: 'private-office-complex', component: PrivateOfficeComplexComponent },
+    { path: 'meeting-room', component: MeetingRoomComponent },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
- 
+
 export const routing = RouterModule.forRoot(appRoutes,
     { enableTracing: true } );

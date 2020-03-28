@@ -1,0 +1,409 @@
+<div class="container col-md-5">
+  <form class="form-horizontal">
+    <div class="header">
+      <h3 class="head text-center">Ahora las Especificaciones</h3>
+      <h3 class="head text-center">Elije las características que posee la sala de reunión</h3>
+    </div>
+
+    <div class="characteristics">
+      <div class="row">
+        <div class='col-xs-12 col-sm-6'>
+          <div class="form-group">
+            <label class="control-label">Metros Cuadrados</label>
+            <input class="form-control input-md" type="text" suffix="M2" mask="separator.2" thousandSeparator=","
+              placeholder="0">
+          </div>
+        </div>
+
+        <div class='col-xs-12 col-sm-6'>
+          <div class="form-group">
+            <label class="control-label" for="lastname">Tamaño de la mesa</label>
+            <input class="form-control input-md" type="number" min="0" placeholder="0">
+          </div>
+        </div>
+
+        <div class='col-xs-12 col-sm-6'>
+          <div class="form-group">
+            <label class="control-label" for="lastname">Numero de Sillas</label>
+            <input class="form-control input-md" type="number" min="0" placeholder="0">
+          </div>
+        </div>
+
+        <div class='col-xs-12 col-sm-6'>
+          <div class="form-group">
+            <label class="control-label" for="lastname">Capacidad Maxima de Personas</label>
+            <input class="form-control input-md" type="number" min="0" placeholder="Si aplica">
+          </div>
+        </div>
+      </div>
+
+      <label class="radio-inline">
+        <input [(ngModel)]="hasFurniture" type="checkbox" name="hasFurniture">
+        Mobiliario Incluido
+      </label>
+
+      <div *ngIf="hasFurniture" class="row">
+        <div class='col-md-12'>
+          <textarea class="form-control" rows="3"
+            placeholder="Agregue opciones como sillas, mesas, data, audio, pantalla gigante, pizarrón etc">
+          </textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="personal-use-area">
+      <h3 class="head text-center">Elige las areas individuales de la oficina privada</h3>
+
+      <ul>
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Recepcion
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" [(ngModel)]="hasMeetingRooms" name="optradio">
+            Centro de impresiones
+          </label>
+          <input *ngIf="hasMeetingRooms" type="number">
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Cocina
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Bar
+          </label>
+        </li>
+
+        <li>
+          <label class="radio">
+            <input type="checkbox" [(ngModel)]="hasBathrooms" name="optradio">
+            baños
+          </label>
+          <input *ngIf="hasBathrooms" type="number">
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Terraza
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Zona de esparcimiento
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="common-area">
+      <h3 class="head text-center">Elije las áreas comunes que ofrece el complejo</h3>
+      <ul>
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Vestibulo
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Recepcion
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" [(ngModel)]="hasMeetingRooms" name="optradio">
+            Salas de reunion
+          </label>
+          <input *ngIf="hasMeetingRooms" type="number">
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Centros de Impresion
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Área financiera
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Sucursal Bancaria
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Cajeros Automaticos
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Centro Comercial
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Cafetería
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Restaurante
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Cocina
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Food Court
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Bar
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Lounge
+          </label>
+        </li>
+
+        <li>
+          <label class="radio">
+            <input type="checkbox" [(ngModel)]="hasBathrooms" name="optradio">
+            Baños
+          </label>
+          <input *ngIf="hasBathrooms" type="number">
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Terraza
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Zona de esparcimiento
+          </label>
+        </li>
+
+        <li>
+          <label class="radio">
+            <input type="checkbox" [(ngModel)]="hasPrivateParking" name="optradio">
+            Parqueo privado
+          </label>
+          <input *ngIf="hasPrivateParking" type="number">
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Helipuerto
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Gimnasio
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Spa
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Salón de belleza
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Barbería
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Farmacia
+          </label>
+        </li>
+
+        <li>
+          <label class="radio-inline">
+            <input type="checkbox" name="optradio">
+            Enfermería
+          </label>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="amenities">
+      <h3 class="head text-center">Elige las amenidades que posee y/o servicios que ofrece el complejo</h3>
+
+      <div class="form-group">
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="elevator"> Elevadores
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="electricalGenerator"> Generador Electrico
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="waterTank"> Tanque de agua
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="waterWell"> Pozo
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="airConditioning"> Area Climatizada
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="wifi"> WiFi
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="privateSecurity"> Seguridad Privada
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="open247"> Abierto 24/7
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="receptionService"> Servicio de recepcion
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="valetParking"> Valet Parking
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="cleaning"> Limpieza
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="maintanance"> Mantenimiento
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="checkbox" name="catering"> Catering
+          </label>
+        </div>
+
+        <div class="row">
+          <div class='col-md-12'>
+            <label class="control-label">Espacio libre para informacion Adicional</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing">
+        <h3 class="head text-center">Precio y otros cargos</h3>
+        <br>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <th scope="row">Precio</th>
+              <td scope="row">
+                <input mask="separator.2" thousandSeparator="," prefix="L." class="form-control" placeholder="Precio">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <app-other-charges class="todos"></app-other-charges>
+      </div>
+
+      <div class="form-group text-center space-40 navigation">
+        <button class="btn btn-outline-rounded btn-secondary" (click)="goToPrevious(null)"> <span
+            style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous</button>
+        <button class="btn btn-outline-rounded btn-info" (click)="goToNext(null)"> Next <span style="margin-left:10px;"
+            class="glyphicon glyphicon-arrow-right"></span></button>
+      </div>
+    </div>
+  </form>
+</div>
