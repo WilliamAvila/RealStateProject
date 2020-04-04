@@ -14,8 +14,9 @@ export class PropertyCategoryComponent implements OnInit {
     form: any;
     postName: any;
     selectedType: string;
-    types = [{value:"house",text:"Casa"}, {value:"apartment",text:"Apartamento"}, {value:"shop",text:"Local Comercial"}, {value:"",text:"Plaza Comercial"}, {value:"warehouse",text:"Bodega o Almacen"}, {value:"building",text:"Edificio"}, {value:"land",text:"Terreno"}, {value:"estate",text:"Finca"}, {value:"executive-offices",text:"Oficinas Ejecutivas"}];
-    officeTypes = [{value:"private-office",text:"Oficina Privada"}, {value:"floor-office",text:"Piso de oficinas privadas"}, {value:"cowork",text:"Espacio de trabajo"},{value:"meeting-rooms",text:"Salas de reunión"}, {value:"event-rooms",text:"Salón de eventos"}, {value:"auditorium",text:"Auditorio"}];
+    types = [{value:"house",text:"Casa"}, {value:"apartment",text:"Apartamento"}, {value:"shop",text:"Local Comercial"}, {value:"warehouse",text:"Bodega o Almacen"}, {value:"building",text:"Edificio"}, 
+            {value:"land",text:"Terreno"}, {value:"estate",text:"Finca"}, {value:"executive-offices",text:"Oficinas Ejecutivas"}, {value:"mall",text:"Plaza Comercial"}];
+    officeTypes = [{value:"private-office",text:"Oficina Privada"}, {value:"private-office-complex",text:"Piso de oficinas privadas"}, {value:"workspace",text:"Espacio de trabajo"},{value:"meeting-room",text:"Salas de reunión"}, {value:"event-hall",text:"Salón de eventos"}, {value:"auditorium",text:"Auditorio"}];
     officeType: string;
     waterTank: string;
     furniture: string;
