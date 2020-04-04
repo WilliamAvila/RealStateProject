@@ -16,4 +16,12 @@ export class PrivateOfficeComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToPrevious(path) {
+
+  }
+
+  goToNext(path) {
+
+  }
+
 }
