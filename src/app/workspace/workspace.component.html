@@ -18,7 +18,7 @@
         <div class='col-xs-12 col-sm-6'>
           <div class="form-group">
             <label class="control-label" for="lastname">Tamaño de la mesa</label>
-            <input class="form-control input-md" type="number" min="0" placeholder="0">
+            <input class="form-control input-md" type="number" suffix="in2" min="0" placeholder="0">
           </div>
         </div>
 
@@ -177,10 +177,10 @@
 
         <li>
           <label class="radio">
-            <input type="checkbox" [(ngModel)]="hasPrivateParking" name="optradio">
-            Parqueo privado
+            <input type="checkbox" [(ngModel)]="hasCommonBathrooms" name="optradio">
+            Baños
           </label>
-          <input *ngIf="hasPrivateParking" type="number">
+          <input *ngIf="hasCommonBathrooms" type="number">
         </li>
 
         <li>

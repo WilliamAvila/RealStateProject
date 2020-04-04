@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class PrivateOfficeComplexComponent implements OnInit {
   hasFurniture = false;
   hasBathrooms = false;
+  hasCommonBathrooms = false;
   hasMeetingRooms = false;
   hasPrivateParking = false;
 
