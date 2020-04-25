@@ -48,6 +48,7 @@ import { MeetingRoomComponent } from './meeting-room/meeting-room.component';
 import { MallComponent } from './mall/mall.component';
 import { AuditoriumComponent } from './auditorium/auditorium.component';
 import { EventHallComponent } from './event-hall/event-hall.component';
+import { PostCardComponent } from './post-card/post-card.component';
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -94,7 +95,8 @@ export function getAuthServiceConfigs() {
     MeetingRoomComponent,
     MallComponent,
     AuditoriumComponent,
-    EventHallComponent
+    EventHallComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule,

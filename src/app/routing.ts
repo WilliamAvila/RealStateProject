@@ -26,6 +26,8 @@ import { MeetingRoomComponent } from './meeting-room/meeting-room.component';
 import { MallComponent } from './mall/mall.component';
 import { AuditoriumComponent } from './auditorium/auditorium.component';
 import { EventHallComponent } from './event-hall/event-hall.component';
+import { PostCardComponent } from './post-card/post-card.component';
+import { PostsListComponent } from './posts-list/posts-list.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -55,6 +57,8 @@ const appRoutes: Routes = [
     { path: 'mall', component: MallComponent },
     { path: 'auditorium', component: AuditoriumComponent },
     { path: 'event-hall', component: EventHallComponent },
+    { path: 'post', component: PostCardComponent },
+    { path: 'post-list', component: PostsListComponent },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];

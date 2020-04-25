@@ -1,0 +1,36 @@
+<div class="post-card">
+  <div class="post-desc card-section">
+    <h4>{{postData.postTitle}}</h4>
+    <div class="img-container">
+      <img src="https://images.adsttc.com/media/images/5be9/fd5c/08a5/e5a5/8c00/008f/slideshow/CARLES_FAUS_ARQUITECTURA_-_CARMEN_HOUSE_(2).jpg?1542061390"/>
+      <div class="post-type">
+        <span>{{postData.itemType}}</span>
+        <span>{{postData.postType}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="post-actions card-section">
+    <div class="actions-container pad">
+      <div class="delete action">
+        <a href="#">Delete</a>
+        <i class="fa fa-trash"></i>
+      </div>
+      <div class="edit action">
+        <a href="#">Edit</a>
+        <i class="fa fa-pencil"></i>
+      </div>
+    </div>
+    <div class="post-props">
+      <ul>
+        <li>{{postData.postType}}</li>
+        <li>{{postData.roomCount}} habitaciones</li>
+        <li>{{postData.bathroomCount}} baños</li>
+        <li>{{postData.parkingSpotsCount}} parqueos</li>
+      </ul>
+    </div>
+    <div class="price pad">
+      Precio: Lps. {{postData.price}}/{{postData.paymentFrequency}}
+    </div>
+  </div>
+</div>

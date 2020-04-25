@@ -1,3 +1,5 @@
-<p>
-  posts-list works!
-</p>
+<div class="post-list-container">
+  <div class="post-wrapper" *ngFor="let post of postFixture">
+    <app-post-card [postData]="post"></app-post-card>
+  </div>
+</div>

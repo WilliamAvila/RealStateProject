@@ -1,0 +1,69 @@
+.post-card {
+  /* Add shadows to create the "post-card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+/* On mouse-over, add a deeper shadow */
+.post-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.img-container {
+  padding: 8px 16px;
+}
+
+.img-container img {
+  justify-content: center;
+  max-width: 300px;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+
+.separator {
+  border: 1px solid rgba(0,0,0,0.2);
+  margin: 30px 0px;
+}
+
+.actions-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action {
+  display: inherit;
+  margin: 0 10px;
+  line-height: 15px;
+}
+
+.action i {
+  padding-left: 5px
+}
+
+.post-props {
+  display: flex;
+  flex-grow: 2;
+  align-items: center;
+}
+
+.price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pad {
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
